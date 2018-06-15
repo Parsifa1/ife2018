@@ -2,7 +2,7 @@
  * @Author: tony
  * @Date:   2018-06-10T21:42:33+08:00
  * @Last modified by:   tony
- * @Last modified time: 2018-06-11T12:16:53+08:00
+ * @Last modified time: 2018-06-15T09:07:44+08:00
  */
 
 // 邮箱后缀List参考
@@ -10,12 +10,16 @@ var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
 var emailInputEl = document.getElementById("email-input");
 var emailSugWrapper = document.getElementById('email-sug-wrapper');
 //inputDom的输入监听
-emailInputEl.oninput = function() {
+emailInputEl.oninput = judgeEmailSugWrapperDisplay;
   // 获取用户输入，生成提示框中的提示内容，将提示内容添加到email - sug - wrapper中
   // 控制email - sug - wrapper的显示 / 隐藏状态
-  judgeEmailSugWrapperDisplay();
-}
+
 emailInputEl.onblur = emailSugWrapperHide;
+emailInputEl.onfocus = function(){
+  if(getEmailVal()){
+    emailSugWrapperShow()
+  }
+}
 emailSugWrapper.onclick = function(e){
   console.log(e)
 }
@@ -32,7 +36,7 @@ function produceEmailPostfixList() {
   if(atIndex !== -1 && atIndex === val.length-1){
     postfixList.forEach(item=>{listContent+=`<li>${val + item}</li>`})
   }else if(atIndex!==-1){
-    let postfixFilterList = postfixList.filter(value=>value.indexOf(val.substring(atIndex+1)) !== -1);
+    let postfixFilterList = postfixList.filter(value=>value.indexOf(val.substring(atIndex+1)) === 0);
     if(val.indexOf(postfixFilterList[0])===-1){
       postfixFilterList.forEach(item=>{listContent+=`<li>${val.substr(0,atIndex+1) + item}</li>`})
     }
