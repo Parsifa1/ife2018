@@ -1,0 +1,581 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 200;
+}
+a{
+  text-decoration: none;
+}
+/* section1 */
+.introduction{
+  background: url(https://i.loli.net/2018/07/12/5b46ba0e62b3e.jpg);
+  background-size: cover;
+}
+.introduction .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  min-height: 100vh;
+  justify-content: space-between;
+  color: #fff;
+  padding: 210px 0;
+}
+.introduction .content>div{
+  border: 1px solid #57554d;
+}
+.introduction .content>h2{
+  font-size: 62px;
+  font-weight: 200;
+}
+.introduction .content>p{
+  color: #c1c0be;
+  width: 768px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: lighter;
+  text-align: center;
+}
+.introduction .content input{
+  background: inherit;
+  border: 1px solid #57554d;
+  width: 292px;
+  height: 50px;
+  margin: 0 15px;
+  color: #fff;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+.introduction .content button{
+  width: 125px;
+  height: 50px;
+  border: none;
+  margin: 0 15px;
+  cursor: pointer;
+  font-weight: normal;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.login{
+  width: 970px;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+}
+.login .title{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.login .title h3{
+  font-size: 16px;
+  letter-spacing: 3px;
+  padding-bottom: 20px;
+}
+.login .title p{
+  font-size: 12px;
+  color: #53514d;
+  letter-spacing: 2px;
+}
+
+/* section2 */
+.customizable{
+  height: 710px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0 32px;
+}
+.customizable .header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 660px;  
+}
+.customizable .header p{
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+.customizable .header h2{
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+  margin-top: 20px
+}
+.customizable .items{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1040px;
+  align-items: center;
+}
+.customizable .item{
+  width: 438px;
+  padding-left: 74px;
+  margin: 0 20px 68px;
+}
+.customizable .item h3{
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.customizable .item p{
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+}
+.customizable .item:nth-child(1){
+  background: url(https://i.loli.net/2018/07/12/5b46d55d059a0.gif) no-repeat 0 7px;
+}
+.customizable .item:nth-child(2){
+  background: url(https://i.loli.net/2018/07/12/5b46d55d1080d.gif) no-repeat 0 7px;
+}
+.customizable .item:nth-child(3){
+  background: url(https://i.loli.net/2018/07/12/5b46d55d06fe8.gif) no-repeat 0 7px;
+}
+.customizable .item:nth-child(4){
+  background: url(https://i.loli.net/2018/07/12/5b46d55d11f94.png) no-repeat 0 7px;
+}
+/* section3 */
+.smart-car{
+  color: #fff;
+  background: url(https://i.loli.net/2018/07/12/5b46fabac58dc.png);
+  background-size: cover;
+  min-height: 800px;
+}
+.smart-car > .content{
+	display: flex;
+  	justify-content: space-between;
+  	width: 100%;
+  	height: 800px;
+  	align-items: center;
+	background: rgba(0,0,0,.5);
+}
+.info{
+  
+  padding-left: 314px;
+}
+.smart-car .info h2{
+  font-size: 42px;
+  line-height: 52px;
+  width: 400px;
+  margin-bottom: 36px;
+  font-weight: 100;
+}
+.smart-car .info p{
+  font-size: 18px;
+  line-height: 28px;
+  width: 400px;
+  font-weight: 100;
+  margin-bottom: 36px;
+}
+.smart-car .info .link-btn{
+  width: 240px;
+  height: 60px;
+  letter-spacing: 1px;
+  line-height: 60px;
+  border-radius: 3px;
+}
+.smart-car .info .link-btn:first-child{
+  margin-right: 30px;
+}
+.display-wrapper{
+  height: 600px;
+  border: 1px solid #696868;
+  padding: 30px 0 30px 60px;
+  border-radius: 36px 0 0 36px;
+  position: relative;
+}
+.display-wrapper .icon-mic{
+  height: 10px;
+    width: 10px;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  left: 25px;
+}
+/* section4 */
+.products{
+  min-height: 580px;
+  display: flex;
+  padding: 100px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+}
+.products h2{
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 400;
+}
+.products .product-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.products .product-list .product-item{
+  width: 268px;
+  margin: 0 38px;
+  font-size: 16px;
+  line-height: 26px;
+
+}
+.products .product-list .product-item p{
+  padding-top: 72px;
+  text-align: center;
+}
+.products .product-list .product-item:nth-child(1) p{
+  background: url(https://i.loli.net/2018/07/12/5b4705953fd99.gif) no-repeat top center;
+}
+.products .product-list .product-item:nth-child(2) p{
+  background: url(https://i.loli.net/2018/07/12/5b4705951e002.gif) no-repeat top center;
+}
+.products .product-list .product-item:nth-child(3) p{
+  background: url(https://i.loli.net/2018/07/12/5b4705953e56c.gif) no-repeat top center;
+}
+/* section5 */
+
+.features{
+  min-height: 1000px;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.features .feature{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.features .feature .feature-info {
+  width: 312px;
+}
+
+.features .feature img,.features .feature div.feature-info{
+  margin: 0 50px;
+}
+.features .feature .feature-info h2{
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-bottom: 24px
+}
+.features .feature .feature-info p{
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* section6  */
+
+section.team{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0;
+  min-height: 1084px;
+    border-bottom: 1px solid #aaa;
+  justify-content: space-between;
+}
+
+section.team > div{
+  display: flex;
+}
+
+section.team .title{
+  flex-direction: column;
+  align-items: center;
+}
+section.team .title h2{
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 20px
+}
+section.team .title p{
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  width: 770px;
+}
+section.team .team-items{
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+}
+section.team .team-items .item{
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+}
+section.team .team-items .item .item-info{
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+section.team .team-items .item .item-info > div{
+  margin: 20px 0;
+}
+section.team .team-items .item:hover .item-info{
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  background: rgba(0,0,0,.5);
+  margin: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.team .team-items .item .item-info .item-info-wrapper{
+  
+}
+section.team .team-items .item .item-info .item-info-wrapper h3{
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+}
+section.team .team-items .item .item-info .item-info-wrapper p{
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+section.team .team-items .item .item-info-links{
+  display: flex;
+  justify-content: center;
+}
+section.team .team-items .item .item-info-links a{
+  height: 54px;
+  width: 54px;
+  border:1px solid #aaa;
+  border-radius: 37px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* section7 */
+.contact{
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact > div {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.contact .contact-form{
+  border:1px solid #aaa;
+  border-radius: 10px;
+  justify-content: space-between;
+  height: 560px;
+}
+.contact .contact-form h3{
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.contact .contact-form input,.contact .contact-form button {
+  width: 370px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px
+}
+.contact .contact-form textarea{
+  width: 370px;
+  height: 144px;
+  border: 1px solid #aaa;
+  padding: 20px
+}
+.contact button{
+  background: #000;
+  border: none;
+  color:#fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.contact .contact-info{
+  margin-left: 50px;
+  height: 480px;
+  justify-content: space-between;
+}
+.contact .contact-info h2{
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 500;
+}
+.contact .contact-info p{
+  font-size: 16px;
+  line-height: 26px;
+}
+.contact-info-item {
+  font-weight: 600;
+  padding-left: 36px;
+}
+.contact-info .location{
+  background: url(https://i.loli.net/2018/07/12/5b472ce953f57.gif) no-repeat 0 4px;
+}
+.contact-info .phone{
+  background: url(https://i.loli.net/2018/07/12/5b472ce95fb5b.gif) no-repeat 0 2px;
+}
+.contact-info .email{
+  background: url(https://i.loli.net/2018/07/12/5b472ce95e529.gif) no-repeat 0 4px;
+}
+/* footer */
+footer{
+  background: #000;
+  color: #fff;
+  display: flex;
+  min-height: 420px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer a{
+  color: #494949;
+  font-size: 16px;
+  line-height: 46px;
+}
+footer a:hover{
+  color: #fff;
+}
+footer > div{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+}
+footer h3{
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+footer p{
+  color: #494949;
+  font-size: 18px;
+  line-height: 28px;
+}
+footer div.enjoy-your-life{
+  height: 212px;
+}
+footer div.enjoy-your-life > h3{
+  margin-bottom: 10px;
+}
+footer div.enjoy-your-life > div{
+  display: flex;
+  margin: 20px 0;
+}
+
+footer div.enjoy-your-life > div i{
+  height: 20px;
+  width: 20px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+  background-size: 
+}
+footer div.enjoy-your-life > div i.twitter{
+  background: url(./images/twitter.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.facebook{
+  background: url(./images/facebook.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.google-plus{
+  background: url(./images/google_plus.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.tumblr{
+  background: url(./images/tumblr.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.pinterest{
+  background: url(./images/pinterest.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.linkedin{
+  background: url(./images/linkedin.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.twitter:hover{
+  background: url(./images/twitter_w.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.facebook:hover{
+  background: url(./images/facebook_w.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.google-plus:hover{
+  background: url(./images/google_plus_w.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.tumblr:hover{
+  background: url(./images/tumblr_w.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.pinterest:hover{
+  background: url(./images/pinterest_w.png)no-repeat center center;
+}
+footer div.enjoy-your-life > div i.linkedin:hover{
+  background: url(./images/linkedin_w.png)no-repeat center center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
