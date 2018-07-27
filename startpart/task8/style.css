@@ -1,0 +1,670 @@
+/* 整体布局 */
+/*@import url（'https://fonts.googleapis.com/css?family= Open + Sans '）; */
+body{
+  position: relative;
+  height: 100vh;
+  font-family: "Open Sans","sans-serif";
+  font-weight: 200;
+  overflow: hidden;
+}
+body>.header{
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 100px;
+  background: #1d2531;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body>.nav{
+  position: absolute;
+  height: 100%;
+  left: 100px;
+  background: #222c3c;
+  width: 250px;
+  color: #b7c0cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 29px;
+}
+body>section{
+  position: absolute;
+  left: 350px;
+  right: 0;
+  height: 100%;
+}
+/* header */
+body>.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+body>.header .header-wrapper .icon-items{
+  
+}
+body>.header .header-wrapper .icon-items .item{
+  height: 60px;
+  width: 60px;
+/*   background: #fff; */
+  margin: 20px auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body>.header .header-wrapper .icon-items .item:nth-child(1){
+    background: -webkit-linear-gradient(bottom, #1990e7 , #2c94e2); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, #1990e7, #2c94e2); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top, #1990e7, #2c94e2); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, #1990e7 , #2c94e2); /* 标准的语法（必须放在最后） */
+}
+body>.header .header-wrapper .icon-items .item:nth-child(2){
+    background: -webkit-linear-gradient(bottom, #805de6 , #9d8fe3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, #805de6, #9d8fe3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top, #805de6, #9d8fe3); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, #805de6 , #9d8fe3); /* 标准的语法（必须放在最后） */
+}
+body>.header .header-wrapper .icon-items .item:nth-child(3){
+    background: -webkit-linear-gradient(bottom, #cc280b , #f45437); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, #cc280b, #f45437); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top, #cc280b, #f45437); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, #cc280b , #f45437); /* 标准的语法（必须放在最后） */
+}
+
+body>.header .header-wrapper .add-icon{
+  height: 60px;
+  width: 60px;
+  background: #2d3848;
+  margin: auto;
+  border-radius: 30px;
+  padding: 3px;
+  cursor: pointer;
+}
+body>.header .header-wrapper .add-icon .add-icon-wrapper{
+  height: 54px;
+  width: 54px;
+  background: #1d2531;
+  border-radius: 27px;
+  position: relative;
+}
+body>.header .header-wrapper .add-icon .add-icon-wrapper .add-icon-column{
+  height: 30px;
+  width: 4px;
+  background: #2d3848;
+  border-radius: 2px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -2px;
+}
+body>.header .header-wrapper .add-icon .add-icon-wrapper .add-icon-row{
+  height: 4px;
+  width: 30px;
+  background: #2d3848;
+  border-radius: 2px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -15px;
+}
+body>.header .header-setting{
+  /*! background: #fff; */
+  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 29px;
+  align-items: flex-end;
+}
+body>.header .header-setting i{
+  cursor: pointer;
+}
+/* .nav */
+body>.nav .nav-item {
+  border-top: solid 1px #2a3547;
+  padding-top: 12px;
+}
+body>.nav .nav-item:first-child {
+  border-top: none;
+  padding: 0;
+}
+body>.nav .nav-item .nav-item-header{
+  font-size: 12px;
+  line-height: 40px;
+  color: #5b6779;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body>.nav .nav-item .nav-item-header i{
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: url(./images/12_15_13.png) no-repeat center center;
+}
+body>.nav .nav-item ul p{
+  font-size: 14px;
+  line-height: 36px;
+}
+body>.nav .nav-item ul li{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body>.nav .nav-item ul li:hover{
+  color: #fff;
+}
+body>.nav .nav-item ul li i{
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 20px;
+  background: #2ba0f6;
+  color: #fff;
+  font-style: normal;
+  padding: 0 8px;
+}
+body>.nav .nav-item ul li i.red{
+  background: #cc280b;
+}
+body>.nav .nav-item ul li:last-child{
+  margin-bottom: 12px;
+}
+body>.nav .nav-footer .goal{
+  display: flex;
+  justify-content: space-between;
+}
+body>.nav .nav-footer i{
+  font-style: normal;
+  font-size: 14px;
+}
+
+body>.nav .nav-footer .chart{
+  height: 4px;
+  background: #2d3848;
+  margin-top: 10px;
+}
+
+body>.nav .nav-footer .chart > div{
+  height: 100%;
+  width: 18.125%;
+  border-radius: 4px;
+    background: -webkit-linear-gradient(left, #e7241d , #9287d4); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #e7241d, #9287d4); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #e7241d, #9287d4); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #e7241d , #9287d4); /* 标准的语法（必须放在最后） */
+}
+
+/* section */
+body>section>header{
+  height: 80px;
+  border-bottom: 1px solid #e6e9ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+body>section>header>h2{
+  font-size: 24px;
+  font-weight: 300;
+  color: #354052;
+}
+body>section .avata{
+  height: 46px;
+  width: 46px;
+  border-radius: 23px;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./images/avata01.png);
+  flex-shrink: 0;
+}
+body>section>header>.account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:  0 80px;
+  position: relative;
+}
+body>section>header>.account>.avata{
+  margin-right: 16px;
+}
+body>section>header>.account>.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 46px;
+  padding: 6px 0
+}
+body>section>header>.account>.user-info .user-name{
+  font-size: 16px;
+  color: #2399f1;
+}
+body>section>header>.account>.user-info .user-power{
+  font-size: 13px;
+  color: #bababa;
+  font-weight: 200;
+}
+body>section>header>.account>.account-more{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  height: 10px;
+  width: 10px;
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  transform: rotate(45deg) translate(-50%,-50%);
+  cursor: pointer;
+}
+
+body>section .second{
+  height: 70px;
+  padding: 0 30px;
+  border-bottom: 1px solid #e6e9ec;
+}
+body>section>aside{
+  width: 400px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  bottom: 0;
+  border-right: 1px solid #e6e9ec;
+  overflow: hidden;
+}
+body>section>aside>.serach{
+  position: relative;
+  height: 70px;
+  padding: 0 30px;
+  /*! border: I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable. It's not perfect, but I really don; */
+  border-bottom: 1px solid #e6e9ec;
+}
+body>section>aside>.serach input{
+  position: absolute;
+  width: 340px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding-left: 14px;
+  padding-right: 36px;
+  top: 17px;
+  font-size: 14px;
+}
+body>section>aside>.serach button{
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+  padding: 0;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+body>section>aside>.serach button:before{
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #ddd;
+  border-radius: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+body>section>aside>.serach button::after{
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 2px;
+  background: #ddd;
+  transform: rotate(-45deg);
+  left: 14px;
+  top: 11px;
+}
+body>section>aside>.firends-list{
+  width: 100%;
+  overflow: -moz-scrollbars-none;
+  position: absolute;
+  bottom: 0;
+  top: 70px;
+}
+body>section>aside>.firends-list>.wrapper .firends-item{
+  padding: 16px 30px;
+  border-bottom: 1px solid #e6e9ec;
+}
+body>section>aside>.firends-list>.wrapper .firends-item:last-child{
+  padding: 16px 30px;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .firends-info{
+  display: flex;
+  justify-content: space-between;
+  /*! align-items: center; */
+  margin-bottom: 16px;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .firends-info .firends-info-content{
+  display: flex;
+  align-items: center;
+  /*! margin-bottom: 16px; */
+}
+body>section>aside>.firends-list>.wrapper .firends-item .firends-info .firends-info-content .avata{
+  margin-right: 20px;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .firends-info .firends-info-content .firends-nickname strong{
+  font-size: 16px;
+  color: #585d68;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .firends-info .firends-info-content .firends-nickname{
+  margin-bottom: 5px;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .firends-info .firends-info-content .firends-nickname-and-app{
+  font-size: 12px;
+  color: #b5b5b5
+}
+.time-since{
+  font-size: 14px;
+  color: #7f8fa4;
+  margin-top: 6px;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .message-preview p{
+  font-size: 14px;
+  line-height: 19px;
+  color: #585d68;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+body>section>aside>.firends-list>.wrapper .firends-item .message-preview i{
+  display: none;
+}
+body>section>aside>.firends-list>.wrapper .new-message .message-preview{
+  position: relative;
+}
+body>section>aside>.firends-list>.wrapper .new-message .message-preview i{
+  font-style: normal;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -13px;
+  transform: translateY(-50%);
+  height: 26px;
+  border-radius: 13px;
+  color: #fff;
+  background: #299df5;
+  text-align: center;
+  line-height: 26px;
+  padding: 0 9px;
+}
+body>section>aside>.firends-list>.wrapper .new-message .firends-info .firends-info-content .firends-nickname-and-app .firends-nickname{
+  color: #00aaff;
+  display: flex;
+  align-items: center;
+}
+
+body>section>aside>.firends-list>.wrapper .new-message .firends-info .firends-info-content .firends-nickname-and-app .firends-nickname i{
+  height: 10px;
+  width: 10px;
+  background: #00aaff;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+body>section>aside>.firends-list>.wrapper{
+  overflow-y: scroll;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: -17px;
+}
+
+
+/* articl */
+
+body>section>section{
+  position: absolute;
+  left: 400px;
+  right: 0;
+  bottom: 0;
+  top: 80px;
+}
+body>section>section header{
+  height: 70px;
+  border-bottom: 1px solid #e6e9ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px 0 30px;
+}
+body>section>section header .firends-nickname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body>section>section header .firends-nickname strong{
+  font-size: 18px;
+  color: #585d68;
+  margin-right: 15px;
+}
+body>section>section header .firends-nickname i{
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background: #1bb934;
+}
+
+body>section>section header .right{
+  height: 36px;
+  display: flex;
+}
+
+body>section>section header .right .control-tools {
+  padding-right: 24px;
+  border-right: 1px solid #ddd;
+  height: 100%;
+}
+body>section>section header .right .control-tools .control-tools-wrapper{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  background: #fdfdfd;
+}
+body>section>section header .right .control-tools .control-tools-wrapper a{
+  height: 36px;
+  width: 36px;
+  border-left: 1px solid #ddd;
+}
+body>section>section header .right .control-tools .control-tools-wrapper a:first-child{
+  border: none;
+}
+body>section>section header .right .control-tools .control-tools-wrapper a.add-firend{
+  background: url(./images/tools1.png) no-repeat center center;
+}
+body>section>section header .right .control-tools .control-tools-wrapper a.upload-message{
+  background: url(./images/tools2.png) no-repeat center center;
+}
+body>section>section header .right .control-tools .control-tools-wrapper a.delete-message{
+  background: url(./images/tools3.png) no-repeat center center;
+}
+body>section>section header .right .paging{
+  display: flex;
+  padding-left: 24px;
+  align-items: center;
+}
+body>section>section header .right .paging>div{
+  margin-right: 15px;
+}
+body>section>section header .right .paging .current-page{
+  font-size: 14px;
+  font-weight: 500;
+}
+body>section>section header .right .paging .paging-tools{
+  height: 36px;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fdfdfd;
+}
+body>section>section header .right .paging .paging-tools a{
+  height: 36px;
+  width: 36px;
+/*   background: red; */
+}
+body>section>section header .right .paging .paging-tools a.prev{
+  border-right: 1px solid #ddd;
+}
+body>section>section header .right .paging .paging-tools a.prev:before{
+  content: "";
+  display: block;
+    width:0;
+    height:0;
+    border-width:8px 8px 8px 0;
+    border-style:solid;
+    border-color:transparent #ced0da transparent transparent;/*透明 灰 透明 透明 */
+    margin:10px auto;
+    position:relative;
+}
+body>section>section header .right .paging .paging-tools a.next:before{
+  content: "";
+  display: block;
+    width:0;
+    height:0;
+    border-width:8px 0 8px 8px;
+    border-style:solid;
+    border-color:transparent transparent transparent #ced0da;/*透明 灰 透明 透明 */
+    margin:10px auto;
+    position:relative;
+}
+body>section>section article .message{
+  /*! position: relative; */
+  padding: 20px 30px;
+  display: flex;
+}
+body>section>section article .message .message-content{
+  margin-left: 20px;
+  /*! position: absolute; */
+  /*! top: 20px; */
+  /*! left: 0; */
+  /*! right: 50px; */
+}
+body>section>section article .message .message-content .message-info{
+  
+}
+body>section>section article .message .message-content .message-info strong{
+  font-size: 16px;
+  color: #585d68;
+}
+body>section>section article .message .message-content .message-info i{
+  font-size: 14px;
+  color: #7f8fa4;
+  font-weight: 500;
+  line-height: 36px;
+  font-style: normal;
+  padding-left: 10px;
+}
+body>section>section article .message .message-content .message-content-words{
+  font-size: 14px;
+  line-height: 19px;
+  color: #585d68;
+}
+body>section>section article .partition{
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+/*   padding: 20px 0; */
+  color: #7f8fa4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body>section>section article .partition > p{
+ background: #fff;
+  padding: 20px;
+}
+body>section>section article .partition > p:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background: #e6e9ec;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+}
+body>section>section article .partition.new > p{
+ background: #fff;
+ color: #a7d6f9;
+}
+body>section>section article .partition.new > p:before{
+  background: #a7d6f9;
+}
+body>section>section article{
+  position: absolute;
+  overflow: hidden;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+body>section>section article .message-list-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -16px;
+  bottom: 0;
+  overflow-y: scroll;
+}
+body>section>section article .message-input{
+  padding: 20px 30px;
+  position: relative;
+}
+body>section>section article .message-input input{
+  height: 54px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #dfe3e9;
+  padding-left: 64px;
+  font-size: 14px;
+  line-height: 19px
+}
+body>section>section article .message-input button{
+  position: absolute;
+  height: 54px;
+  width: 54px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ced0da;
+  background: #fff;
+  top: 0;
+  left: 0;
+  margin: 20px 30px;
+  cursor: pointer;
+  color: #585d68;
+}
+body>section>section article .message-input button:before{
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  background: #9fa9ba;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+body>section>section article .message-input button:after{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 16px;
+  border-radius: 1px;
+  background: #9fa9ba;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
