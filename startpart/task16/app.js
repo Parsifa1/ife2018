@@ -1,4 +1,4 @@
-let sourceData = [{
+/* let sourceData = [{
     product: "手机",
     region: "华东",
     sale: [120, 100, 140, 160, 180, 185, 190, 210, 230, 245, 255, 270]
@@ -98,6 +98,7 @@ checkAll.addEventListener('change',function(e){
  * @param {selector} 容器元素(CSS Selector)
  * @param {userOptions} 需传入的数据
  */
+/**
 class CheckBox{
     constructor(selector,data){
         this.$selector = selector
@@ -155,4 +156,26 @@ class CheckBox{
     getChecked(){
         return this.child.filter(item=>item.checked).length
     }
-}
+} */
+
+import data from './data'
+import table from './table'
+import CheckBox from './checkbox'
+
+const checkboxWrapper = document.querySelector('.check-box');
+const tableWrapper = document.getElementById('table-wrapper');
+
+new CheckBox(checkboxWrapper,[{
+    text: "华北",
+    value: "华北"
+},{
+    text: "华南",
+    value: "华南"
+},{
+    text: "华东",
+    value: "华东"
+}])
+
+tableWrapper.appendChild(table(data,{
+    thead: ["商品", "地区", "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+}))
