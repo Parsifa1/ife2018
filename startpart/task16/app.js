@@ -73,17 +73,86 @@ function getChecked(){
     return [...checkbox].filter(item=>item.checked).map(i=>i.value)
 }
 function checkboxHandle(e){
-    let len = getChecked();
-    if(len===1 && e.target.checked){
-        e.preventDefault()
-    }else if(len===2 && !e.target.checked){
-        checkAll.checked = true;
+    let len = getChecked().length;
+    console.log(len)
+    if(len === 0){
+        this.checked = true
+    }else if(len!==3){
+        checkAll.checked=false
     }
 }
 for(let item of checkbox){
-    item.addEventListener('click',checkboxHandle,false)
+    item.addEventListener('change',checkboxHandle,false)
 }
-checkAll.addEventListener('click',(e)=>{
+checkAll.addEventListener('change',function(e){
     let len = getChecked();
-    if(len===3 && e.target.checked) return false;
+    if(this.checked){
+        [...checkbox].forEach(item=>item.checked = true)
+    }else if(len.length===3)(
+        this.checked = true
+    )
 },false)
+
+/**
+ * @class {CheckBox} 根据要求封装的类
+ * @param {selector} 容器元素(CSS Selector)
+ * @param {userOptions} 需传入的数据
+ */
+class CheckBox{
+    constructor(selector,data){
+        this.$selector = selector
+        this.data = data
+        this.checkAll = null
+        this.child = null
+        this.render()
+        this.addEvent()
+    }
+    render(){
+        this.data.forEach(item=>{
+            this.$selector.appendChild(this.createCheckBox(item.text,item.value))
+        })
+        let checkAll = this.createCheckBox("全选","all")
+        this.$selector.appendChild(checkAll)
+        this.setChild()
+        this.checkAll = document.querySelector('input[value=all]')
+        this.checkAll.dataset.checkboxType = 'all'
+    }
+    setChild(){
+        this.child = [...this.$selector.querySelectorAll('input')].slice(0,-1)
+    }
+    createCheckBox(name,value){
+        let label = document.createElement('label')
+        label.innerText = name
+        let input = document.createElement('input')
+        input.type = 'checkbox'
+        input.value = value
+        label.appendChild(input)
+        return label
+    }
+    addEvent(){
+        const self = this
+        this.$selector.addEventListener('click',function(e){
+            let el = e.target;
+            let len = self.getChecked()
+            if(el.nodeName.toLowerCase()!=='input') return false;
+            if(el === self.checkAll){
+                if(len === self.child.length){
+                    el.checked = true
+                }else{
+                    self.child.forEach(item=>item.checked=true)
+                }
+            }else{
+                if(len===self.child.length){
+                    self.checkAll.checked = true
+                }else if(len===0){
+                    el.checked = true
+                }else{
+                    self.checkAll.checked = false
+                }
+            }
+        },false)
+    }
+    getChecked(){
+        return this.child.filter(item=>item.checked).length
+    }
+}
