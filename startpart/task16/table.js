@@ -46,7 +46,6 @@ function createTable(data, option) {
     })
     table.appendChild(thead)
     table.appendChild(tbody)
-    console.log(d)
     return table;
 }
 export default createTable;
